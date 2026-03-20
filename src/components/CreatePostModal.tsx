@@ -37,7 +37,7 @@ const style = {
 export function CreatePostModal({ open, onClose, onPostSuccess }: CreatePostModalProps) {
   const [content, setContent] = useState('')
   const [loading, setLoading] = useState(false)
-  const { imageUrl } = useAuth()
+  const { avatarUrl } = useAuth()
 
   const handlePost = async () => {
     if (!content.trim() || content.length > 280) return
@@ -88,7 +88,7 @@ export function CreatePostModal({ open, onClose, onPostSuccess }: CreatePostModa
           </Button>
         </Stack>
         <Stack direction="row" spacing={2} alignItems="flex-start">
-          <Avatar src={imageUrl || ''} sx={{ width: 48, height: 48 }} />
+          <Avatar src={avatarUrl || ''} sx={{ width: 48, height: 48 }} />
           <Box sx={{ width: '100%' }}>
             <TextField
               fullWidth

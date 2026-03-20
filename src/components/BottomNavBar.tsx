@@ -1,6 +1,6 @@
-import React from 'react'
+
 import { Paper, BottomNavigation, BottomNavigationAction, Avatar, Box } from '@mui/material'
-import { Home, Tag, Person, HomeOutlined, TagOutlined, PersonOutlined } from '@mui/icons-material'
+import { Home, Tag, HomeOutlined, TagOutlined } from '@mui/icons-material'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useAppSelector } from '../store/store.hooks'
 

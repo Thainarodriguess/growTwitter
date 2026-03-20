@@ -36,11 +36,11 @@ const style = {
 
 export function UpdateProfileModal({ open, onClose }: UpdateProfileModalProps) {
   const dispatch = useAppDispatch()
-  const { name, imageUrl } = useAuth()
+ const { displayName, avatarUrl } = useAuth()
   
   const [formData, setFormData] = useState({
-    name: '',
-    imageUrl: ''
+    name: displayName || '',
+    imageUrl: avatarUrl || ''
   })
 
   useEffect(() => {
