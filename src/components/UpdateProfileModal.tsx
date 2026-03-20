@@ -43,14 +43,14 @@ export function UpdateProfileModal({ open, onClose }: UpdateProfileModalProps) {
     imageUrl: avatarUrl || ''
   })
 
-  useEffect(() => {
-    if (open) {
-      setFormData({
-        name: name || '',
-        imageUrl: imageUrl || ''
-      })
-    }
-  }, [open, name, imageUrl])
+ useEffect(() => {
+  if (open) {
+    setFormData({
+      name: displayName || '',
+      imageUrl: avatarUrl || ''
+    })
+  }
+}, [open, displayName, avatarUrl])
 
   const handleSave = () => {
 
